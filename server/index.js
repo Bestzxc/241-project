@@ -160,7 +160,7 @@ app.post("/export-pdf", async (req, res) => {
 
         users.forEach((user, index) => {
             // เพิ่มข้อมูลใน PDF
-            doc.fontSize(16).text(`ผู้ใช้ ${index + 1}`, { underline: true });
+            doc.fontSize(16).text(`คิวที่ ${index + 1}`, { underline: true });
         
             // เพิ่มข้อมูลต่างๆ โดยไม่ใช้ moveDown() บ่อยเกินไป
             doc.fontSize(14).text(`ID: ${user.id || 'N/A'}`);
