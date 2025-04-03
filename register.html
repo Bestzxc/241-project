@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registor Form</title>
+    <link rel="stylesheet" href="register.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- left -->
+        <div class="left">
+            <div class="menu">
+                <button class="menu-button" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></button>
+                <div class="menu-content" id="dropdown">
+                    <a href="home.html">Home</a>
+                    <a href="register.html">Register</a>
+                    <a href="user.html">User Management</a>
+                </div>
+            </div>
+        </div>
+        <!-- right -->
+        <div class="right">
+            <div class="header">Register Form</div>
+            <div class="inline">
+                <div>
+                    Firstname<input class="form-input" type="text" name="firstname" placeholder="ชื่อ...">
+                </div>
+                <div>
+                    Lastname<input class="form-input" type="text" name="lastname" placeholder="นามสกุล...">
+                </div>
+            </div>
+            <div class="form">
+                <div>
+                    Phone Number<input class="form-input" type="text" name="tel" placeholder="หมายเลขโทรศัพท์...">
+                </div>
+                <div>
+                    Email<input class="form-input" type="text" name="email" placeholder="อีเมลล์...">
+                </div>
+            </div>
+            <div class="inline-radio">
+                <div class="show-radio">
+                    <input id="show-textarea" type="radio" name="type" onclick="toggleInput()" value="รับ-ส่งถึงที่">
+                    Delivery
+                </div>
+                <div class="show-radio">
+                    <input id="hide-textarea" type="radio" name="type" onclick="toggleInput()" value="รับเอง"> Walk-in
+                </div>
+            </div>
+            <div class='input-textarea' id="input-textarea">
+                <div class="form-input">
+                    <textarea name="address" placeholder="ที่อยู่สำหรับ รับ-ส่ง..."></textarea>
+                </div>
+            </div>
+            <div class="center">
+                <button onclick="submitData()" class="button">Submit</button>
+            </div>
+            <div class="message" id="message"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <script src="register.js"></script>
+</body>
+
+</html>

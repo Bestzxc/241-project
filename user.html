@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management</title>
+    <link rel="stylesheet" href="user.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Users Management</h1>
+        <div class="menu">
+            <button class="menu-button" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></button>
+            <div class="menu-content" id="dropdown">
+                <a href="home.html">Home</a>
+                <a href="register.html">Register</a>
+                <a href="user.html">User Management</a>
+            </div>
+        </div>
+        <div class="flex">
+            <div id="pdf">Export to PDF</div>
+        </div>
+        <div class="end">
+            <input type="text" id="searchBox" placeholder="ค้นหา..." />
+        </div>
+        <div id="user"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <script src="user.js"></script>
+</body>
+</html>

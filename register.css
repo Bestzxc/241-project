@@ -1,0 +1,205 @@
+@font-face {
+    font-family: 'font';
+    src: url('./font/MN Nang Kai Thot.ttf');
+}
+body {
+    display: flex;
+    height: 100vh;
+    background-image: linear-gradient(to top right, rgba(80, 80, 80, 0.5),rgb(117, 117, 117)), url('./images/2.png');
+    
+    color: #f8fbfd;
+    font-size: 20px;
+    font-family: 'font';
+    
+}
+.container {
+    display: flex;
+    width: 1700px;
+    height: 900px;
+    margin: auto;
+    background: #282a37;
+    border-radius: 25px;
+    box-shadow: 0 0 4px 2px #000000;
+    overflow: hidden;
+}
+.right{
+    flex: 1;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+}
+.left{
+    background-image: url('./images/1.png');
+    position: relative;
+    width: 1100px;
+    padding: 20px;
+    display: flex;
+    border-radius: 25px;
+    flex-direction: column;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-image: linear-gradient(to top right, rgba(52, 57, 78, 0.5),rgb(112, 112, 112)), url('./images/1.png');
+
+}
+.center {
+    text-align: center;
+}
+
+.header {
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.inline {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.inline-radio {
+    display: flex;
+    gap: 20px;
+}
+
+input, textarea {
+    font-size: 16px;
+    margin-bottom: 5px;
+    padding: 15px;
+    border-radius: 15px;
+    border: 0;
+    box-sizing: border-box;
+    background-color: #323645;
+    color: #edf0f3;
+    transition: 0.2s;
+}
+input:hover, textarea:hover{
+    background-color: #3e424d;
+}
+input:focus, textarea:focus{
+    box-shadow: 0 0 4px 2px #2d6ca6;
+    background-color: #3e424d;
+    outline: none;
+}
+textarea {
+    width: 100%;
+}
+
+.input-textarea {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.7s ease, opacity 0.7s ease;
+}
+
+.input-textarea.active {
+    max-height: 150px;
+    opacity: 1;
+}
+
+.form-input {
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+.show-radio {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.message.success {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: rgb(64, 156, 64);
+    transition: 0.3s;
+}
+
+.message.danger {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: rgb(167, 60, 60);
+    transition: 0.3s;
+}
+.menu {
+    margin-top: 10px;
+    margin-left: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;    
+}
+
+.menu-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    margin-left: 20px;
+    margin-top: 20px;
+    border: 2px solid white;
+    border-radius: 15px;
+    background: transparent;
+    box-shadow: 0 0 6px black;
+    color: white;
+    font-size: 30px;
+    transition: 0.2s;
+}
+.menu-button i {
+    pointer-events: none;
+}
+.menu-button:hover {
+    color: rgb(168, 168, 168);
+    border: 2px solid rgb(168, 168, 168);
+    transform: scale(1.2);
+}
+.menu-button:focus {
+    color: rgb(108, 108, 108);
+    border: 2px solid rgb(108, 108, 108);
+    transform: scale(1.1);
+}
+.menu-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 300px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    font-size: 25px;
+    overflow: hidden;
+}
+
+.menu-content a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+    transition: 0.3s;
+}
+
+.menu-content a:hover {
+    background-color: #c6c6c6;
+}
+.show {
+    display: block;
+}
+.button{
+    border: 0;
+    width: 25%;
+    background-color: #1d90f4;
+    border-radius: 5px;
+    color: white;
+    height: 40px;
+    font-size: 15px;
+    font-weight:bolder;
+    transition: 0.3s;
+}
+.button:hover {
+    background-color: #0f4e85;
+    box-shadow: 0 0 5px black;
+}
+.button:active {
+    background-color: rgb(8, 45, 77)
+}
