@@ -58,7 +58,6 @@ input:focus {
     font-family: 'font';
 }
 .nav-slide{
-    display: flex;
     margin-bottom: -50px;
 
 }
@@ -100,6 +99,7 @@ input:focus {
     border: 5px solid #2c2e36;
     border-radius: 8px;
     box-shadow: 0 0 4px 2px #000000;
+    
 }
 h3{
     font-family: 'font';

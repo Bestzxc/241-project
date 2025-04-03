@@ -23,9 +23,9 @@ body {
     overflow: hidden;
 }
 .right{
+    display: flex;
     flex: 1;
     padding: 50px;
-    display: flex;
     flex-direction: column;
 }
 .left{
@@ -73,6 +73,7 @@ input, textarea {
     color: #edf0f3;
     transition: 0.2s;
 }
+
 input:hover, textarea:hover{
     background-color: #3e424d;
 }
@@ -145,7 +146,7 @@ textarea {
     box-shadow: 0 0 6px black;
     color: white;
     font-size: 30px;
-    transition: 0.2s;
+    transition: 0.5s;
 }
 .menu-button i {
     pointer-events: none;

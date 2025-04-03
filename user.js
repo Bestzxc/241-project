@@ -81,28 +81,21 @@ window.onclick = function(event) {
 }
 
 //export PDF
-document.getElementById('pdf').addEventListener('click', function () {
-    fetch('http://localhost:8000/export-pdf', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({})
-    })
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('ไม่สามารถสร้าง PDF ได้');
-        }
-        return response.blob();
-    })
-    .then(blob => {
+document.getElementById('pdf').addEventListener('click', async function () {
+    try {
+        const response = await axios.post('http://localhost:8000/export-pdf', {}, {
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            responseType: 'blob'
+        });
 
+        const blob = response.data;
         const link = document.createElement('a');
         link.href = URL.createObjectURL(blob);
         link.download = 'Users.pdf';
         link.click();
-    })
-    .catch(error => {
-        alert(error.message);
-    });
+    } catch (error) {
+        alert(error.message || 'ไม่สามารถสร้าง PDF ได้');
+    }
 });

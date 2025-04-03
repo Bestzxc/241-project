@@ -2,7 +2,7 @@ BASE_URL = 'http://localhost:8000';
 let mode = 'CREATE';
 let selectedId = '';
 //textarea
-function toggleInput() {
+const toggleInput = () => {
     let delivery = document.getElementById('show-textarea');
     let show = document.getElementById('input-textarea');
 
@@ -13,7 +13,7 @@ function toggleInput() {
     }
 }
 //menu
-function toggleMenu() {
+const toggleMenu = () => {
     document.getElementById("dropdown").classList.toggle("show");
 }
 window.onclick = function(event) {
