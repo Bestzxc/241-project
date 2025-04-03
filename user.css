@@ -223,3 +223,77 @@ button.edit:hover{
 .show {
     display: block;
 }
+@media screen and (max-width: 768px) {
+    
+    .menu-button {
+        width: 40px;
+        height: 40px;
+        font-size: 24px;
+        left: 0;
+        width: 35px;
+        height: 35px;
+        font-size: 20px;
+    }
+    .menu-content {
+        min-width: 200px;
+        font-size: 18px;
+    }
+    .user-info {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+    .user-line {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+    h1 {
+        font-size: 30px;
+        text-align: center;
+    }
+    .flex {
+        justify-content: flex-end;
+    }
+    #pdf {
+        width: 150px;
+        font-size: 16px;
+    }
+    #searchBox {
+        width: 80%;
+    }
+    .container {
+        padding: 20px;
+        width: 90%;
+    }
+    .menu {
+        position: relative;
+        text-align: center;
+    }
+    
+    body {
+        font-size: 16px;
+    }
+    .menu-content {
+        min-width: 180px;
+        font-size: 16px;
+    }
+    h1 {
+        font-size: 24px;
+        padding-top: 20px;
+    }
+    .user-info {
+        min-width: 250px;
+        font-size: 20px;
+        
+    }
+    .button {
+        width: 50px;
+        height: 35px;
+        font-size: 14px;
+    }
+    #pdf {
+        width: 130px;
+        height: 35px;
+        font-size: 20px;
+    }
+}

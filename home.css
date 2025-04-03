@@ -162,18 +162,29 @@ footer a {
     font-family: 'font';
     font-size: 30px;
 }
-@media (max-width: 900px) {
-    .services {
-        grid-template-columns: repeat(2, 1fr);
+@media screen and (max-width: 768px) {
+    h1{
+        font-size: 50px;
     }
-}
-
-@media (max-width: 500px) {
     .services {
         grid-template-columns: 1fr;
     }
-
     .search-bar input {
+        
         width: 100%;
+    }
+    .nav-slide {
+        justify-content: space-between;
+    }
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 60px;
+    }
+    .lead {
+        font-size: 24px;
+    }
+    footer {
+        font-size: 12px;
     }
 }
